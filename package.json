@@ -2,10 +2,10 @@
   "name": "day12",
   "version": "1.0.0",
   "description": "",
-  "main": "Day12.js",
+  "main": "video24.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon Day12.js"
+    "start":"nodemon video24.js"
   },
   "keywords": [],
   "author": "",
