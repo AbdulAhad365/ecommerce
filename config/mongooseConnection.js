@@ -1,10 +1,16 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
+const config=require("config")
+const debug = require("debug")("development:mongoose");
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/day12")
-  .then(function(){console.log("connected to mongodDB")})
-  .catch(function(){console.error("some error occurs while connecting")})
-  ;
+  await mongoose
+    .connect(`${config.get("MONGODB_URL")}/day12`)
+    .then(function () {
+      debug("connected to mongodDB");
+    })
+    .catch(function () {
+      debug("some error occurs while connecting");
+    });
 }
 
-module.exports=main
+module.exports = main;
